@@ -1,15 +1,14 @@
 const express = require("express");
-var methodOverride = require('method-override');
 const app = express();
 const port = 8080;
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
-uuidv4();
+var methodOverride = require('method-override');
 
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(methodOverride('X-HTTP-Method-Override'));
+app.use(methodOverride('_method'));
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -67,14 +66,20 @@ app.patch("/posts/:id", (req, res) => {
     let newContent = req.body.content;
     let post = posts.find((p) => p.id === id);
     post.content = newContent;
-    console.log(post);
-    res.send("Patch Request Working");
+    res.render("thankyou.ejs");
 });
 
 app.get("/posts/:id/edit", (req, res) => {
     let { id } = req.params;
     let post = posts.find((p) => p.id === id);
     res.render("edit.ejs", { post })
+});
+
+
+app.delete("/posts/:id", (req, res) => {
+    let { id } = req.params;
+    posts = posts.filter((p) => id !== p.id);
+    res.send("Delete Success")
 })
 
 

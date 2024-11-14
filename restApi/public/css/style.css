@@ -237,3 +237,23 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+.deleteButon{
+    background-color: red;
+    color: white;
+    transition: all .3s ease-in-out;
+}
+.deleteButon:hover{
+    background-color: white;
+    color: red;
+    box-shadow: 1px 1px 1px #0000;
+}
+.deleteButon .deleteSvg{
+    height: 16px;
+    width: 16px;
+}
+
+.editSvg{
+    height: 16px;
+    width: 16px;
+}
