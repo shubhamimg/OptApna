@@ -1,0 +1,239 @@
+h1{
+    color: maroon;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.main-card{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.posts{
+    background-color: blanchedalmond;
+    width: 32%;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 32%;
+}
+
+.user{
+    font-style: italic;
+}
+
+
+/* Body and Container Styling */
+.bodyy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Form Header */
+h2 {
+    margin-bottom: 1em;
+    color: #333;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 1em;
+}
+
+/* Input and Textarea Styling */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Button Styling */
+.submit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Container Styling */
+.create-post-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Button Styling */
+.create-post-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+}
+
+/* Hover Effect */
+.create-post-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Focus and Active Styles */
+.create-post-button:active {
+    background-color: #004494;
+    transform: scale(0.98);
+}
+
+.errorContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.errorText{
+    color: red;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 70px;
+}
+
+
+
+
+
+
+/* Container Styling */
+.details-container {
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    align-content: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Button Styling */
+.details-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9em;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover Effect */
+.details-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Active State */
+.details-button:active {
+    background-color: #1e7e34;
+    transform: scale(0.98);
+}
+
+
+.main-edit-container {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    /* width: 100%; */
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
