@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>All Posts</title>
-        <link rel="stylesheet" href="/css/style.css">
-    </head>
-    <body>
 
-        <h1>Quora Posts</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
 
-        <div class="main-card">
-            <% for (let post of posts) { %>
+<body>
+
+    <h1>Quora Posts</h1>
+
+    <div class="main-card">
+        <% for (let post of posts) { %>
             <div class="posts">
-                <h3 class="user">@<%= post.username %></h3>
-                <h4 class="content"><%= post.content %></h4>
+                <h3 class="user">@<%= post.username %>
+                </h3>
+                <h4 class="content">
+                    <%= post.content %>
+                </h4>
                 <div class="details-container">
-                    <a href="http://localhost:8080/posts/<%= post.id %>"
-                        class="details-button">See In Details</a>
-                    <a href="http://localhost:8080/posts/<%= post.id %>/edit"
-                        class="details-button"><svg stroke="currentColor"
-                            fill="currentColor" stroke-width="0"
-                            viewBox="0 0 24 24" class="editSvg"
-                            xmlns="http://www.w3.org/2000/svg"><path fill="none"
-                                d="M0 0h24v24H0z"></path><path
-                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path></svg></a>
-                    <form method="post"
-                        action="/posts/<%= post.id%>?_method=DELETE">
+                    <a href="http://localhost:8080/posts/<%= post.id %>" class="details-button">See In Details</a>
+                    <a href="http://localhost:8080/posts/<%= post.id %>/edit" class="details-button"><svg
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                            class="editSvg" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path
+                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z">
+                            </path>
+                        </svg></a>
+                    <form method="post" action="/posts/<%= post.id%>?_method=DELETE">
                         <button class="deleteButon">
-                            <svg stroke="currentColor" fill="currentColor"
-                                stroke-width="0" viewBox="0 0 24 24"
-                                class="deleteSvg"
-                                xmlns="http://www.w3.org/2000/svg"><path
-                                    fill="none"
-                                    d="M0 0h24v24H0z"></path><path
-                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"></path></svg>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                                class="deleteSvg" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z">
+                                </path>
+                            </svg>
                         </button>
                     </form>
                 </div>
             </div>
             <% } %>
-        </div>
-        <div class="create-post-container">
-            <a href="http://localhost:8080/posts/new"
-                class="create-post-button">Create New Post</a>
-        </div>
+    </div>
+    <div class="create-post-container">
+        <a href="http://localhost:8080/posts/new" class="create-post-button">Create New Post</a>
+    </div>
 
-    </body>
+</body>
+
 </html>
