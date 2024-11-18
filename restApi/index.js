@@ -33,9 +33,13 @@ let posts = [
     },
 ];
 
+
+// at index page
 app.get("/posts", (req, res) => {
     res.render("index.ejs", { posts });
 });
+
+// post new blog
 
 app.get("/posts/new", (req, res) => {
     res.render("new.ejs")
@@ -49,6 +53,8 @@ app.post("/posts", (req, res) => {
 });
 
 
+// see in details
+
 app.get("/posts/:id", (req, res) => {
     let { id } = req.params;
     let post = posts.find((p) => p.id === id);
@@ -60,6 +66,8 @@ app.get("/posts/:id", (req, res) => {
     }
 });
 
+
+// edit
 
 app.patch("/posts/:id", (req, res) => {
     let { id } = req.params;
@@ -75,6 +83,8 @@ app.get("/posts/:id/edit", (req, res) => {
     res.render("edit.ejs", { post })
 });
 
+
+// delete 
 
 app.delete("/posts/:id", (req, res) => {
     let { id } = req.params;
